@@ -15,6 +15,7 @@ namespace MyDefaultMAUIApp
             var contents = reader.ReadToEnd();
 
             jokes.AddRange(contents.Split('\n'));
+            DisplayJoke();
         }
 
         List<string> jokes = new List<string> { };
@@ -22,19 +23,33 @@ namespace MyDefaultMAUIApp
 
         private async void OnCounterClicked(object sender, EventArgs e)
         {
+            DisplayJoke();
+        }
+
+        private string GetNextJoke()
+        {
             Random rnd = new Random();
             int currentJokeIndex = rnd.Next(0, jokes.Count);
+            return jokes.ElementAt(currentJokeIndex);
+        }
 
-            SemanticScreenReader.Announce(DisplayLbl.Text);
-            var joke = jokes.ElementAt(currentJokeIndex);
-            DisplayLbl.Text = joke;
+        private void RemoveJokeFromPool(string joke)
+        {
             jokes.Remove(joke);
             displayedJokes.Add(joke);
-            if(jokes.Count == 0)
+            if (jokes.Count == 0)
             {
                 jokes.AddRange(displayedJokes);
                 displayedJokes.Clear();
             }
+        }
+
+        private void DisplayJoke()
+        {
+            var joke = GetNextJoke();
+            DisplayLbl.Text = joke;
+            SemanticScreenReader.Announce(DisplayLbl.Text);
+            RemoveJokeFromPool(joke);
         }
     }
 }

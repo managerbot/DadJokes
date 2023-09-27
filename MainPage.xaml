@@ -11,7 +11,7 @@
 
             <Label
                 x:Name="DisplayLbl"
-                Text="Welcome to DadJokes 1.0. Jokes will be displayed here. Enjoy!"
+                Text=""
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
