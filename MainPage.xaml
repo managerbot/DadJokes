@@ -2,20 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyDefaultMAUIApp.MainPage"
+             x:Name="MyContentPage"
+             Title="DadJokes"
              Shell.BackgroundColor="Red"
              Shell.TitleColor="Yellow">
     <Shell.TitleView>
-        <HorizontalStackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+        <Grid>
             <Label
-      Text="DadJokes"
-      FontFamily="JokerMan"
-      TextColor="Yellow"
-      VerticalTextAlignment="Center"
-      VerticalOptions="CenterAndExpand"
-      HorizontalTextAlignment="Center"
-      HeightRequest="50"
-      FontSize="Large" />
-        </HorizontalStackLayout>
+                x:Name="TitleLbl"
+                Text="{Binding Title, Source={x:Reference MyContentPage}}"
+                TextColor="Yellow"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Large"/>
+        </Grid>
     </Shell.TitleView>
 
     <ScrollView>
@@ -29,14 +31,15 @@
                 Text=""
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"/>
 
             <Button
                 x:Name="CounterBtn"
                 Text="Click for a new joke"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
 
         </VerticalStackLayout>
     </ScrollView>
