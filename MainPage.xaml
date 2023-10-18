@@ -1,7 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyDefaultMAUIApp.MainPage">
+             x:Class="MyDefaultMAUIApp.MainPage"
+             Shell.BackgroundColor="Red"
+             Shell.TitleColor="Yellow">
+    <Shell.TitleView>
+        <HorizontalStackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Label
+      Text="DadJokes"
+      FontFamily="JokerMan"
+      TextColor="Yellow"
+      VerticalTextAlignment="Center"
+      VerticalOptions="CenterAndExpand"
+      HorizontalTextAlignment="Center"
+      HeightRequest="50"
+      FontSize="Large" />
+        </HorizontalStackLayout>
+    </Shell.TitleView>
 
     <ScrollView>
         <VerticalStackLayout
@@ -14,8 +29,7 @@
                 Text=""
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="CenterAndExpand" />
 
             <Button
                 x:Name="CounterBtn"

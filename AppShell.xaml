@@ -5,9 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MyDefaultMAUIApp"
     Shell.FlyoutBehavior="Disabled"
-    Shell.NavBarIsVisible="False"
-    Shell.BackgroundColor="Yellow"
-    Shell.ForegroundColor="DarkBlue">
+    Shell.NavBarIsVisible="True">
 
     <ShellContent
         Title="DadJokes"
