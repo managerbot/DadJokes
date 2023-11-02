@@ -15,6 +15,7 @@
                 VerticalOptions="Center"
                 VerticalTextAlignment="Center"
                 HorizontalOptions="Center"
+                MinimumHeightRequest="100"
                 HorizontalTextAlignment="Center"
                 FontSize="Large"/>
         </Grid>

@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\Jokerman.ttf" />
 	  <None Remove="Resources\Raw\DadJokes.txt" />
 	  <None Remove="Resources\Raw\DadJokes2.txt" />
 	</ItemGroup>

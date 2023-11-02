@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging; 
 
 namespace MyDefaultMAUIApp
 {
@@ -13,6 +13,7 @@ namespace MyDefaultMAUIApp
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Jokerman.ttf", "JokerManRegular");
                 });
 
 #if DEBUG
