@@ -70,4 +70,10 @@
 	  </MauiAsset>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiFont Update="Resources\Fonts\Jokerman.ttf">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </MauiFont>
+	</ItemGroup>
+
 </Project>

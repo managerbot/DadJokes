@@ -13,7 +13,7 @@ namespace MyDefaultMAUIApp
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                    fonts.AddFont("Jokerman.ttf", "JokerManRegular");
+                    fonts.AddFont("Jokerman.ttf", "Jokerman");
                 });
 
 #if DEBUG
